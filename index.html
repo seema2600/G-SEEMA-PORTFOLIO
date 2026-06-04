@@ -11,8 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;600;800;900&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Chart.js for Interactive Mock Dashboards -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -298,7 +297,7 @@
                     <div class="neon-line"></div>
                 </div>
                 <div class="projects-grid">
-                    <!-- Project 1: Airline Analytics -->
+                    <!-- Project 1: Airline Performance -->
                     <div class="project-card glass-card" data-project="airline">
                         <div class="project-viz-preview">
                             <div class="radar-scan"></div>
@@ -316,7 +315,7 @@
                             </div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Airline Analytics Dashboard</h3>
+                            <h3 class="project-title">Airline Performance Dashboard</h3>
                             <div class="project-tags">
                                 <span class="ptag">Power BI</span>
                                 <span class="ptag">SQL</span>
@@ -336,13 +335,18 @@
                                 </ul>
                             </details>
                             
-                            <button class="btn btn-primary btn-sm view-project-btn" data-target="airline-modal">
-                                <i class="fas fa-eye"></i> View Live Analytics
-                            </button>
+                            <div class="project-actions">
+                                <a href="assets/airline_performance_dashboard.pdf" target="_blank" class="btn btn-primary btn-sm view-project-btn">
+                                    <i class="fas fa-chart-line"></i> View Live Analytics
+                                </a>
+                                <a href="assets/airline_performance_dashboard.pdf" class="btn btn-outline btn-sm download-btn" download>
+                                    <i class="fas fa-file-pdf"></i> Download PDF
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Project 2: Election Analysis -->
+                    <!-- Project 2: Tamil Nadu Election Analysis -->
                     <div class="project-card glass-card" data-project="election">
                         <div class="project-viz-preview">
                             <div class="radar-scan scan-purple"></div>
@@ -357,7 +361,7 @@
                             </div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Election Analysis Dashboard</h3>
+                            <h3 class="project-title">Tamil Nadu Election Analysis Dashboard</h3>
                             <div class="project-tags">
                                 <span class="ptag">Power BI</span>
                                 <span class="ptag">Excel</span>
@@ -377,9 +381,14 @@
                                 </ul>
                             </details>
 
-                            <button class="btn btn-primary btn-sm view-project-btn" data-target="election-modal">
-                                <i class="fas fa-eye"></i> View Live Analytics
-                            </button>
+                            <div class="project-actions">
+                                <a href="assets/tamil_nadu_election_analysis_dashboard.pdf" target="_blank" class="btn btn-primary btn-sm view-project-btn">
+                                    <i class="fas fa-chart-line"></i> View Live Analytics
+                                </a>
+                                <a href="assets/tamil_nadu_election_analysis_dashboard.pdf" class="btn btn-outline btn-sm download-btn" download>
+                                    <i class="fas fa-file-pdf"></i> Download PDF
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -421,9 +430,14 @@
                                 </ul>
                             </details>
 
-                            <button class="btn btn-primary btn-sm view-project-btn" data-target="hr-modal">
-                                <i class="fas fa-eye"></i> View Live Analytics
-                            </button>
+                            <div class="project-actions">
+                                <a href="assets/hr_analytics_dashboard.pdf" target="_blank" class="btn btn-primary btn-sm view-project-btn">
+                                    <i class="fas fa-chart-line"></i> View Live Analytics
+                                </a>
+                                <a href="assets/hr_analytics_dashboard.pdf" class="btn btn-outline btn-sm download-btn" download>
+                                    <i class="fas fa-file-pdf"></i> Download PDF
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -621,130 +635,7 @@
         </div>
     </footer>
 
-    <!-- DYNAMIC INTERACTIVE MODALS FOR DETAILED PROJECT GRAPHICS -->
-    <!-- Airline Modal -->
-    <div class="modal" id="airline-modal">
-        <div class="modal-content glass-card">
-            <button class="close-modal-btn" aria-label="Close modal">&times;</button>
-            <div class="modal-grid">
-                <div class="modal-graphic-pane">
-                    <h4 class="pane-title"><i class="fas fa-chart-line"></i> FLIGHT OPERATION TELEMETRY</h4>
-                    <div class="chart-container">
-                        <canvas id="airlineChart"></canvas>
-                    </div>
-                </div>
-                <div class="modal-info-pane">
-                    <h3 class="modal-project-title">Airline Analytics Dashboard</h3>
-                    <span class="modal-project-type">Diagnostic & Predictive Analytics Platform</span>
-                    
-                    <p class="modal-desc">
-                        Built a robust ETL framework inside Power Query to ingestion-map over 150,000 airline routes. Developed customized metrics evaluating on-time performance alongside passenger satisfaction ratings relative to flight tiering.
-                    </p>
 
-                    <div class="insights-block">
-                        <h5>Operational Findings:</h5>
-                        <ul>
-                            <li><strong>Station Congestion:</strong> Hub station overlaps trigger cascading flight delays of up to 45% between 17:00 and 20:00.</li>
-                            <li><strong>Satisfaction Dip:</strong> Passangers with flights delayed by over 42 mins yield average satisfaction ratings of 2.1/5.</li>
-                            <li><strong>Solution Implemented:</strong> Built priority status flags and interactive delay alarms alerting gate agents of target schedule violations.</li>
-                        </ul>
-                    </div>
-
-                    <div class="tools-showcase">
-                        <span>Tools Integrated:</span>
-                        <div class="tool-badges">
-                            <span class="tb">Power Query</span>
-                            <span class="tb">DAX</span>
-                            <span class="tb">SQL Server</span>
-                            <span class="tb">Excel VBA</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Election Modal -->
-    <div class="modal" id="election-modal">
-        <div class="modal-content glass-card">
-            <button class="close-modal-btn" aria-label="Close modal">&times;</button>
-            <div class="modal-grid">
-                <div class="modal-graphic-pane">
-                    <h4 class="pane-title"><i class="fas fa-chart-pie"></i> VOTER TURNOUT & MARGIN DISPERSIONS</h4>
-                    <div class="chart-container">
-                        <canvas id="electionChart"></canvas>
-                    </div>
-                </div>
-                <div class="modal-info-pane">
-                    <h3 class="modal-project-title">Election Analysis Dashboard</h3>
-                    <span class="modal-project-type">Geographic & Demographic Swing Radar</span>
-                    
-                    <p class="modal-desc">
-                        An interactive system modeling election dynamics, polling data, and geographical vote share margins across multiple districts. Enabled historical comparison of voter registration trends.
-                    </p>
-
-                    <div class="insights-block">
-                        <h5>Analytical Highlights:</h5>
-                        <ul>
-                            <li><strong>Urban Margin Concentration:</strong> Visualized that high-density voting zones experienced a 6% growth in turnout, skewing overall statewide calculations.</li>
-                            <li><strong>Predictive Success:</strong> Implemented a weighted margin estimator that correctly predicted seat allocation outcomes with a 94.2% confidence interval.</li>
-                            <li><strong>UX Optimization:</strong> Leveraged spatial tooltips, permitting user hover inquiries to inspect specific sub-district vote margins in micro-detail.</li>
-                        </ul>
-                    </div>
-
-                    <div class="tools-showcase">
-                        <span>Tools Integrated:</span>
-                        <div class="tool-badges">
-                            <span class="tb">Power BI Visuals</span>
-                            <span class="tb">PostgreSQL</span>
-                            <span class="tb">Advanced Excel</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- HR Modal -->
-    <div class="modal" id="hr-modal">
-        <div class="modal-content glass-card">
-            <button class="close-modal-btn" aria-label="Close modal">&times;</button>
-            <div class="modal-grid">
-                <div class="modal-graphic-pane">
-                    <h4 class="pane-title"><i class="fas fa-chart-bar"></i> ATTRITION PROBABILITY BY DEPT & AGE</h4>
-                    <div class="chart-container">
-                        <canvas id="hrChart"></canvas>
-                    </div>
-                </div>
-                <div class="modal-info-pane">
-                    <h3 class="modal-project-title">HR Analytics Dashboard</h3>
-                    <span class="modal-project-type">Organizational Diagnostics & Attrition Modeler</span>
-                    
-                    <p class="modal-desc">
-                        Built a diagnostic dashboard to identify the leading indicators of employee churn and evaluate career path progression timelines against compensation bands.
-                    </p>
-
-                    <div class="insights-block">
-                        <h5>Analytical Highlights:</h5>
-                        <ul>
-                            <li><strong>Churn Drivers:</strong> Compensation levels falling below 12% of the market median in tech cohorts matched with an 80% attrition probability.</li>
-                            <li><strong>Overtime Risk:</strong> Software engineering teams with persistent overtime metrics (>15 hrs/week) experienced a 3x higher exit rate.</li>
-                            <li><strong>Actionable Insight:</strong> Designed an attrition risk flag based on tenure and last-promotion date, allowing HR managers to engage in proactive retention talks.</li>
-                        </ul>
-                    </div>
-
-                    <div class="tools-showcase">
-                        <span>Tools Integrated:</span>
-                        <div class="tool-badges">
-                            <span class="tb">Power BI Desktop</span>
-                            <span class="tb">Descriptive Stats</span>
-                            <span class="tb">DAX Functions</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
