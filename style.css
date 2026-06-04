@@ -1128,10 +1128,25 @@ a {
     font-size: 0.7rem;
 }
 
-.project-content .btn {
-    width: 100%;
+.project-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+.project-actions .btn {
+    flex: 1;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
     justify-content: center;
     margin-top: 0.5rem;
+}
+
+@media (max-width: 480px) {
+    .project-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 }
 
 /* TIMELINE JOURNEY */
