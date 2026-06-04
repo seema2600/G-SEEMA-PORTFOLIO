@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI & Data Science Command Center - G. Seema Portfolio. Aspiring Data Scientist, Power BI Developer, and Data Science Student. Check out projects, skills, and certifications.">
+    <title>G. Seema | Data Science Portfolio & Command Center</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js for Interactive Mock Dashboards -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Neural Network Animation -->
+    <canvas id="neuralCanvas"></canvas>
+
+    <!-- Top Glow Effect -->
+    <div class="top-glow"></div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="pulse-dot"></span>
+                SEEMA<span class="accent-text">.SYS</span>
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#hero" class="active"><i class="fas fa-terminal"></i> Terminal</a></li>
+                    <li><a href="#about"><i class="fas fa-user-astronaut"></i> Bio</a></li>
+                    <li><a href="#skills"><i class="fas fa-microchip"></i> Core Skills</a></li>
+                    <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li><a href="#journey"><i class="fas fa-route"></i> Timeline</a></li>
+                    <li><a href="#certifications"><i class="fas fa-certificate"></i> Certs</a></li>
+                    <li><a href="#contact"><i class="fas fa-satellite-dish"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-content">
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="system-status">
+                        <span class="status-indicator online"></span>
+                        <span class="status-text">SYSTEM STATUS: ONLINE | COGNITIVE MODEL DEPLOYED</span>
+                    </div>
+                    <h1 class="hero-title">G. Seema</h1>
+                    <h2 class="hero-subtitle">Data Science Student | Power BI Developer | Aspiring Data Scientist</h2>
+                    <div class="tagline-container">
+                        <span class="tagline-prompt">&gt; </span>
+                        <span id="typing-tagline"></span><span class="cursor">|</span>
+                    </div>
+                    <p class="hero-desc">
+                        Engineering analytical ecosystems, structuring relational databases, and forging diagnostic dashboards to convert noise into business telemetry.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary"><i class="fas fa-project-diagram"></i> Launch Projects</a>
+                        <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Connect</a>
+                    </div>
+                </div>
+                <div class="hero-visual-wrapper">
+                    <!-- Futuristic Avatar and Floating Analytics HUD -->
+                    <div class="avatar-hud-container">
+                        <div class="hud-circle ring-outer"></div>
+                        <div class="hud-circle ring-inner"></div>
+                        <div class="avatar-frame">
+                            <img src="assets/avatar.png" alt="G. Seema Workstation" class="avatar-img">
+                        </div>
+                        <!-- Floating HUD Panels -->
+                        <div class="floating-hud hud-card-1">
+                            <div class="hud-header">
+                                <span class="hud-dot"></span>
+                                <span class="hud-title">QUERY LATENCY</span>
+                            </div>
+                            <div class="hud-body">
+                                <span class="hud-val">12ms</span>
+                                <span class="hud-trend up"><i class="fas fa-arrow-trend-down"></i> -4.2%</span>
+                            </div>
+                        </div>
+                        <div class="floating-hud hud-card-2">
+                            <div class="hud-header">
+                                <span class="hud-dot yellow"></span>
+                                <span class="hud-title">POWER BI TELEMETRY</span>
+                            </div>
+                            <div class="hud-body">
+                                <div class="mini-bar-chart">
+                                    <div class="bar" style="height: 40%"></div>
+                                    <div class="bar" style="height: 65%"></div>
+                                    <div class="bar" style="height: 80%"></div>
+                                    <div class="bar" style="height: 95%"></div>
+                                    <div class="bar" style="height: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-hud hud-card-3">
+                            <div class="hud-header">
+                                <span class="hud-dot purple"></span>
+                                <span class="hud-title">ACCURACY RATIO</span>
+                            </div>
+                            <div class="hud-body">
+                                <span class="hud-val">96.8%</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Icon Badges -->
+                        <div class="floating-icon excel-icon" title="Excel"><i class="fa-regular fa-file-excel"></i></div>
+                        <div class="floating-icon sql-icon" title="SQL"><i class="fa-solid fa-database"></i></div>
+                        <div class="floating-icon pbi-icon" title="Power BI"><i class="fa-solid fa-chart-pie"></i></div>
+                        <div class="floating-icon py-icon" title="Python"><i class="fa-brands fa-python"></i></div>
+                        <div class="floating-icon stat-icon" title="Statistics"><i class="fa-solid fa-calculator"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>SCROLL TO SYSTEM INIT</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- ABOUT ME SECTION -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">&gt; BIO_DIAGNOSTICS</span>
+                    <h2 class="section-title">About Seema</h2>
+                    <div class="neon-line"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-stats-panel glass-card">
+                        <div class="panel-header">
+                            <i class="fas fa-terminal"></i>
+                            <span>SYSTEM_DIAGNOSTIC_LOG.log</span>
+                        </div>
+                        <div class="panel-content">
+                            <div class="stat-row">
+                                <span class="stat-label">CURRENT_ROLE:</span>
+                                <span class="stat-value">Data Science Student</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">SPECIALIZATION:</span>
+                                <span class="stat-value">Power BI, Business Intelligence & SQL</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">DATABASES_INTEGRATED:</span>
+                                <span class="stat-value">MySQL, SQL Server, PostgreSQL</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">ANALYTICS_HOURS:</span>
+                                <span class="stat-value">500+ Hours</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">ACCURACY_INDEX:</span>
+                                <span class="stat-value">98.2%</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-label">LEARNING_FOCUS:</span>
+                                <span class="stat-value">Machine Learning & Data Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-text-content">
+                        <h3>Translating Data Into Actionable Corporate Intelligence</h3>
+                        <p>
+                            I am G. Seema, a dedicated Data Science student and Power BI developer. My journey centers on unraveling complex database structures and turning chaotic data arrays into striking, interactive reports that empower business executives to make data-driven decisions.
+                        </p>
+                        <p>
+                            I specialize in extracting data using advanced SQL scripting, structuring data models in Excel, and deploying dynamic dashboard telemetry inside Power BI. Currently, I am expanding my toolkit to include Python programming, statistical modeling, and Machine Learning algorithms to bridge the gap between analytics and predictive intelligence.
+                        </p>
+                        <div class="about-badges">
+                            <span class="badge"><i class="fas fa-check"></i> Interactive Dashboarding</span>
+                            <span class="badge"><i class="fas fa-check"></i> ETL Pipelines</span>
+                            <span class="badge"><i class="fas fa-check"></i> Relational Data Models</span>
+                            <span class="badge"><i class="fas fa-check"></i> Predictive Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">&gt; CORE_COMPUTATION_CORES</span>
+                    <h2 class="section-title">Technological Toolkit</h2>
+                    <div class="neon-line"></div>
+                </div>
+                <div class="skills-grid">
+                    <!-- Excel -->
+                    <div class="skill-card glass-card excel-theme">
+                        <div class="skill-icon"><i class="fa-regular fa-file-excel"></i></div>
+                        <h3 class="skill-title">Microsoft Excel</h3>
+                        <p class="skill-desc">VLOOKUP/XLOOKUP, Pivot Tables, Advanced formulas, Power Query ETL, and macro integration.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 90%"></div>
+                        </div>
+                        <span class="skill-percent">90%</span>
+                    </div>
+
+                    <!-- SQL -->
+                    <div class="skill-card glass-card sql-theme">
+                        <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+                        <h3 class="skill-title">Structured Query Language (SQL)</h3>
+                        <p class="skill-desc">Joins, CTEs, Window functions, subqueries, database schemas, and performance tuning.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+
+                    <!-- Power BI -->
+                    <div class="skill-card glass-card pbi-theme">
+                        <div class="skill-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h3 class="skill-title">Power BI</h3>
+                        <p class="skill-desc">Data modeling, DAX (Data Analysis Expressions) queries, interactive dashboards, and publishing.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 92%"></div>
+                        </div>
+                        <span class="skill-percent">92%</span>
+                    </div>
+
+                    <!-- Python -->
+                    <div class="skill-card glass-card python-theme">
+                        <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+                        <h3 class="skill-title">Python Programming</h3>
+                        <p class="skill-desc">Data analysis using Pandas, NumPy, and visualizations with Matplotlib & Seaborn.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 75%"></div>
+                        </div>
+                        <span class="skill-percent">75%</span>
+                    </div>
+
+                    <!-- Statistics -->
+                    <div class="skill-card glass-card stats-theme">
+                        <div class="skill-icon"><i class="fa-solid fa-calculator"></i></div>
+                        <h3 class="skill-title">Statistics</h3>
+                        <p class="skill-desc">Probability, descriptive & inferential statistics, hypothesis testing, and regression models.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 80%"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                    </div>
+
+                    <!-- Data Visualization -->
+                    <div class="skill-card glass-card visualization-theme">
+                        <div class="skill-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3 class="skill-title">Data Visualization</h3>
+                        <p class="skill-desc">Designing user-centric UX for dashboards, customized charts, heatmaps, and storytelling.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 88%"></div>
+                        </div>
+                        <span class="skill-percent">88%</span>
+                    </div>
+
+                    <!-- Business Intelligence -->
+                    <div class="skill-card glass-card bi-theme">
+                        <div class="skill-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h3 class="skill-title">Business Intelligence</h3>
+                        <p class="skill-desc">Requirements gathering, KPI specification, business process modeling, and reporting strategy.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+
+                    <!-- Machine Learning -->
+                    <div class="skill-card glass-card ml-theme learning">
+                        <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3 class="skill-title">Machine Learning <span class="badge-inline">Learning</span></h3>
+                        <p class="skill-desc">Supervised/Unsupervised models, regression, decision trees, clustering, Scikit-Learn pipelines.</p>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-fill" style="width: 45%"></div>
+                        </div>
+                        <span class="skill-percent">45%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SHOWCASE -->
+        <section id="projects" class="projects-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">&gt; RUNNING_DASHBOARDS</span>
+                    <h2 class="section-title">Project Command Decks</h2>
+                    <div class="neon-line"></div>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1: Airline Analytics -->
+                    <div class="project-card glass-card" data-project="airline">
+                        <div class="project-viz-preview">
+                            <div class="radar-scan"></div>
+                            <!-- Embed an interactive tiny graphic representing the dashboard -->
+                            <div class="mini-dashboard-preview">
+                                <div class="preview-kpis">
+                                    <div class="pkpi"><span>FLIGHTS</span><strong>45.2K</strong></div>
+                                    <div class="pkpi"><span>DELAYS</span><strong class="warning-text">14.2%</strong></div>
+                                </div>
+                                <div class="preview-bars">
+                                    <div class="pbar" style="width: 85%; background: var(--p-cyan)"></div>
+                                    <div class="pbar" style="width: 60%; background: var(--p-purple)"></div>
+                                    <div class="pbar" style="width: 40%; background: var(--p-yellow)"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Airline Analytics Dashboard</h3>
+                            <div class="project-tags">
+                                <span class="ptag">Power BI</span>
+                                <span class="ptag">SQL</span>
+                                <span class="ptag">ETL</span>
+                            </div>
+                            <p class="project-desc">
+                                End-to-end interactive dashboard monitoring airline operations, delay frequencies, and overall customer satisfaction indicators.
+                            </p>
+                            
+                            <!-- Key Insights (Expandable) -->
+                            <details class="project-insights">
+                                <summary>Key Insights Revealed <i class="fas fa-chevron-down"></i></summary>
+                                <ul class="insights-list">
+                                    <li>Identified that 68% of extreme delays occurred in 3 specific hub stations due to connection overlaps.</li>
+                                    <li>Discovered correlation: Customer satisfaction scores drops steeply after delay durations surpass 42 minutes.</li>
+                                    <li>Streamlined flight performance tracking, reducing report generation time from 6 hours to real-time.</li>
+                                </ul>
+                            </details>
+                            
+                            <button class="btn btn-primary btn-sm view-project-btn" data-target="airline-modal">
+                                <i class="fas fa-eye"></i> View Live Analytics
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Election Analysis -->
+                    <div class="project-card glass-card" data-project="election">
+                        <div class="project-viz-preview">
+                            <div class="radar-scan scan-purple"></div>
+                            <div class="mini-dashboard-preview">
+                                <div class="preview-kpis">
+                                    <div class="pkpi"><span>TURNOUT</span><strong>72.4%</strong></div>
+                                    <div class="pkpi"><span>SEATS</span><strong class="accent-text">543</strong></div>
+                                </div>
+                                <div class="preview-doughnut">
+                                    <div class="circle-part"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Election Analysis Dashboard</h3>
+                            <div class="project-tags">
+                                <span class="ptag">Power BI</span>
+                                <span class="ptag">Excel</span>
+                                <span class="ptag">SQL</span>
+                            </div>
+                            <p class="project-desc">
+                                A comprehensive, visual database analyzing election statistics, candidate margin patterns, voter swing percentages, and geographical vote spreads.
+                            </p>
+                            
+                            <!-- Key Insights -->
+                            <details class="project-insights">
+                                <summary>Key Insights Revealed <i class="fas fa-chevron-down"></i></summary>
+                                <ul class="insights-list">
+                                    <li>Mapped a 4.5% voter swing toward green policies in highly populated suburban regions.</li>
+                                    <li>Correlated historical margin leads to project seat allocations with an accuracy threshold of 94%.</li>
+                                    <li>Consolidated visual reports across 5 different historical election cycles into one interactive matrix.</li>
+                                </ul>
+                            </details>
+
+                            <button class="btn btn-primary btn-sm view-project-btn" data-target="election-modal">
+                                <i class="fas fa-eye"></i> View Live Analytics
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: HR Analytics -->
+                    <div class="project-card glass-card" data-project="hr">
+                        <div class="project-viz-preview">
+                            <div class="radar-scan scan-yellow"></div>
+                            <div class="mini-dashboard-preview">
+                                <div class="preview-kpis">
+                                    <div class="pkpi"><span>HEADCOUNT</span><strong>1,240</strong></div>
+                                    <div class="pkpi"><span>ATTRITION</span><strong class="danger-text">12.1%</strong></div>
+                                </div>
+                                <div class="preview-dots">
+                                    <div class="dot active"></div>
+                                    <div class="dot active"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot active"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">HR Analytics Dashboard</h3>
+                            <div class="project-tags">
+                                <span class="ptag">Power BI</span>
+                                <span class="ptag">Excel</span>
+                                <span class="ptag">Statistics</span>
+                            </div>
+                            <p class="project-desc">
+                                System diagnostic panel mapping employee retention factors, departmental performance KPIs, salary equity distributions, and attrition projections.
+                            </p>
+                            
+                            <!-- Key Insights -->
+                            <details class="project-insights">
+                                <summary>Key Insights Revealed <i class="fas fa-chevron-down"></i></summary>
+                                <ul class="insights-list">
+                                    <li>Pinpointed that employee attrition peak is concentrated in technical staff with 2-3 years tenure.</li>
+                                    <li>Uncovered a 14% gap between actual career advancement timelines and expectations set in recruiting.</li>
+                                    <li>Provided management with actionable projections, flagging 12 structural adjustments to stem attrition.</li>
+                                </ul>
+                            </details>
+
+                            <button class="btn btn-primary btn-sm view-project-btn" data-target="hr-modal">
+                                <i class="fas fa-eye"></i> View Live Analytics
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEARNING TIMELINE -->
+        <section id="journey" class="journey-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">&gt; GROWTH_VECTOR</span>
+                    <h2 class="section-title">Learning Journey</h2>
+                    <div class="neon-line"></div>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <!-- Timeline Node 1 -->
+                    <div class="timeline-node">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="time-label">PHASE 01</div>
+                            <h3 class="node-title">Microsoft Excel</h3>
+                            <span class="node-subtitle">Foundations of Data Formatting</span>
+                            <p class="node-text">Mastered raw data aggregation, data cleansing, logic formulation, pivot visualizations, and simple database extraction techniques.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Node 2 -->
+                    <div class="timeline-node">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="time-label">PHASE 02</div>
+                            <h3 class="node-title">SQL (Relational Databases)</h3>
+                            <span class="node-subtitle">Mastering the Query Layer</span>
+                            <p class="node-text">Transitioned to relational database management. Engineered complex queries involving CTEs, Windows functions, subqueries, and table schema tuning.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Node 3 -->
+                    <div class="timeline-node">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="time-label">PHASE 03</div>
+                            <h3 class="node-title">Power BI Developer</h3>
+                            <span class="node-subtitle">Interactive Dashboard Engineering</span>
+                            <p class="node-text">Specialized in semantic modeling, DAX data columns/measures, Power Query transformations, and interactive dashboard UX designs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Node 4 -->
+                    <div class="timeline-node">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="time-label">PHASE 04</div>
+                            <h3 class="node-title">Python Core</h3>
+                            <span class="node-subtitle">Scientific Computing & Scripting</span>
+                            <p class="node-text">Strengthened analytical programming. Automating file handling and using libraries like Pandas, NumPy, and Seaborn for statistical computing.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Node 5 -->
+                    <div class="timeline-node">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="time-label">PHASE 05</div>
+                            <h3 class="node-title">Data Science Student</h3>
+                            <span class="node-subtitle">Academic Rigor & Core Analytics</span>
+                            <p class="node-text">Focusing on experimental setup, testing hypotheses, sampling structures, probability modeling, and data extraction pipelines.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Node 6 -->
+                    <div class="timeline-node future">
+                        <div class="timeline-dot pulsing"></div>
+                        <div class="timeline-card glass-card">
+                            <div class="time-label glowing-text">CURRENT FOCUS</div>
+                            <h3 class="node-title">Machine Learning</h3>
+                            <span class="node-subtitle">Predictive Modeling & Core AI</span>
+                            <p class="node-text">Learning algorithmic constructs of supervised/unsupervised ML, regression metrics, classification models, and neural architecture.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS SECTION -->
+        <section id="certifications" class="certs-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">&gt; VERIFIED_SIGNATURES</span>
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="neon-line"></div>
+                </div>
+                <div class="certs-grid">
+                    <div class="cert-card glass-card">
+                        <div class="cert-logo-wrapper">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="cert-details">
+                            <span class="cert-issuer">Deloitte</span>
+                            <h3 class="cert-title">Data Analytics Job Simulation</h3>
+                            <p class="cert-desc">Acquired hands-on exposure to data analysis, dashboard design, business requirement translation, and executive communication strategies.</p>
+                            <span class="cert-verify"><i class="fas fa-shield-halved"></i> Credential Verified</span>
+                        </div>
+                    </div>
+
+                    <div class="cert-card glass-card">
+                        <div class="cert-logo-wrapper">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="cert-details">
+                            <span class="cert-issuer">Tata</span>
+                            <h3 class="cert-title">Data Visualization Job Simulation</h3>
+                            <p class="cert-desc">Practiced user journey mapping, designed complex visual layouts, custom charts, dashboard grids, and metrics tracking for executive-level portfolios.</p>
+                            <span class="cert-verify"><i class="fas fa-shield-halved"></i> Credential Verified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">&gt; TRANSMIT_CHANNEL</span>
+                    <h2 class="section-title">Secure a Terminal Connection</h2>
+                    <div class="neon-line"></div>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-terminal glass-card">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span class="terminal-title">seema@command-deck:~</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p class="terminal-line"><span class="prompt">$</span> ping -c 3 seema.analytics</p>
+                            <p class="terminal-response">64 bytes from seema.analytics: icmp_seq=1 ttl=64 time=0.04 ms</p>
+                            <p class="terminal-response">64 bytes from seema.analytics: icmp_seq=2 ttl=64 time=0.02 ms</p>
+                            <p class="terminal-response">64 bytes from seema.analytics: icmp_seq=3 ttl=64 time=0.03 ms</p>
+                            <br>
+                            <p class="terminal-line"><span class="prompt">$</span> load --contact-information</p>
+                            <div class="terminal-output">
+                                <p><i class="fas fa-arrow-right"></i> <strong>Location:</strong> India</p>
+                                <p><i class="fas fa-arrow-right"></i> <strong>Response SLA:</strong> &lt; 24 Hours</p>
+                                <p><i class="fas fa-arrow-right"></i> <strong>Availability:</strong> Recruiter Queries / Projects</p>
+                            </div>
+                            <br>
+                            <p class="terminal-line"><span class="prompt">$</span> _ <span class="blink"></span></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-links-panel">
+                        <p class="contact-intro">
+                            Looking to integrate a self-driven analytics engine or developer into your engineering organization? Connect through my verified secure interfaces.
+                        </p>
+                        <div class="contact-buttons">
+                            <a href="mailto:gseema.analytics@gmail.com" class="contact-btn email">
+                                <span class="btn-icon"><i class="fas fa-envelope"></i></span>
+                                <span class="btn-text">Email Terminal <small>gseema.analytics@gmail.com</small></span>
+                            </a>
+                            <a href="https://linkedin.com/in/g-seema" target="_blank" rel="noopener" class="contact-btn linkedin">
+                                <span class="btn-icon"><i class="fab fa-linkedin-in"></i></span>
+                                <span class="btn-text">Connect on LinkedIn <small>linkedin.com/in/g-seema</small></span>
+                            </a>
+                            <a href="https://github.com/g-seema" target="_blank" rel="noopener" class="contact-btn github">
+                                <span class="btn-icon"><i class="fab fa-github"></i></span>
+                                <span class="btn-text">Clone Repository <small>github.com/g-seema</small></span>
+                            </a>
+                            <a href="#" class="contact-btn resume" download>
+                                <span class="btn-icon"><i class="fas fa-file-pdf"></i></span>
+                                <span class="btn-text">Download Resume <small>PDF Format</small></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 G. Seema. Designed in Command Space. All Systems Functional.</p>
+            <div class="sys-metrics">
+                <span>MEM: 94.2%</span>
+                <span>CPU: 4.8%</span>
+                <span>PING: 15ms</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DYNAMIC INTERACTIVE MODALS FOR DETAILED PROJECT GRAPHICS -->
+    <!-- Airline Modal -->
+    <div class="modal" id="airline-modal">
+        <div class="modal-content glass-card">
+            <button class="close-modal-btn" aria-label="Close modal">&times;</button>
+            <div class="modal-grid">
+                <div class="modal-graphic-pane">
+                    <h4 class="pane-title"><i class="fas fa-chart-line"></i> FLIGHT OPERATION TELEMETRY</h4>
+                    <div class="chart-container">
+                        <canvas id="airlineChart"></canvas>
+                    </div>
+                </div>
+                <div class="modal-info-pane">
+                    <h3 class="modal-project-title">Airline Analytics Dashboard</h3>
+                    <span class="modal-project-type">Diagnostic & Predictive Analytics Platform</span>
+                    
+                    <p class="modal-desc">
+                        Built a robust ETL framework inside Power Query to ingestion-map over 150,000 airline routes. Developed customized metrics evaluating on-time performance alongside passenger satisfaction ratings relative to flight tiering.
+                    </p>
+
+                    <div class="insights-block">
+                        <h5>Operational Findings:</h5>
+                        <ul>
+                            <li><strong>Station Congestion:</strong> Hub station overlaps trigger cascading flight delays of up to 45% between 17:00 and 20:00.</li>
+                            <li><strong>Satisfaction Dip:</strong> Passangers with flights delayed by over 42 mins yield average satisfaction ratings of 2.1/5.</li>
+                            <li><strong>Solution Implemented:</strong> Built priority status flags and interactive delay alarms alerting gate agents of target schedule violations.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tools-showcase">
+                        <span>Tools Integrated:</span>
+                        <div class="tool-badges">
+                            <span class="tb">Power Query</span>
+                            <span class="tb">DAX</span>
+                            <span class="tb">SQL Server</span>
+                            <span class="tb">Excel VBA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Election Modal -->
+    <div class="modal" id="election-modal">
+        <div class="modal-content glass-card">
+            <button class="close-modal-btn" aria-label="Close modal">&times;</button>
+            <div class="modal-grid">
+                <div class="modal-graphic-pane">
+                    <h4 class="pane-title"><i class="fas fa-chart-pie"></i> VOTER TURNOUT & MARGIN DISPERSIONS</h4>
+                    <div class="chart-container">
+                        <canvas id="electionChart"></canvas>
+                    </div>
+                </div>
+                <div class="modal-info-pane">
+                    <h3 class="modal-project-title">Election Analysis Dashboard</h3>
+                    <span class="modal-project-type">Geographic & Demographic Swing Radar</span>
+                    
+                    <p class="modal-desc">
+                        An interactive system modeling election dynamics, polling data, and geographical vote share margins across multiple districts. Enabled historical comparison of voter registration trends.
+                    </p>
+
+                    <div class="insights-block">
+                        <h5>Analytical Highlights:</h5>
+                        <ul>
+                            <li><strong>Urban Margin Concentration:</strong> Visualized that high-density voting zones experienced a 6% growth in turnout, skewing overall statewide calculations.</li>
+                            <li><strong>Predictive Success:</strong> Implemented a weighted margin estimator that correctly predicted seat allocation outcomes with a 94.2% confidence interval.</li>
+                            <li><strong>UX Optimization:</strong> Leveraged spatial tooltips, permitting user hover inquiries to inspect specific sub-district vote margins in micro-detail.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tools-showcase">
+                        <span>Tools Integrated:</span>
+                        <div class="tool-badges">
+                            <span class="tb">Power BI Visuals</span>
+                            <span class="tb">PostgreSQL</span>
+                            <span class="tb">Advanced Excel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HR Modal -->
+    <div class="modal" id="hr-modal">
+        <div class="modal-content glass-card">
+            <button class="close-modal-btn" aria-label="Close modal">&times;</button>
+            <div class="modal-grid">
+                <div class="modal-graphic-pane">
+                    <h4 class="pane-title"><i class="fas fa-chart-bar"></i> ATTRITION PROBABILITY BY DEPT & AGE</h4>
+                    <div class="chart-container">
+                        <canvas id="hrChart"></canvas>
+                    </div>
+                </div>
+                <div class="modal-info-pane">
+                    <h3 class="modal-project-title">HR Analytics Dashboard</h3>
+                    <span class="modal-project-type">Organizational Diagnostics & Attrition Modeler</span>
+                    
+                    <p class="modal-desc">
+                        Built a diagnostic dashboard to identify the leading indicators of employee churn and evaluate career path progression timelines against compensation bands.
+                    </p>
+
+                    <div class="insights-block">
+                        <h5>Analytical Highlights:</h5>
+                        <ul>
+                            <li><strong>Churn Drivers:</strong> Compensation levels falling below 12% of the market median in tech cohorts matched with an 80% attrition probability.</li>
+                            <li><strong>Overtime Risk:</strong> Software engineering teams with persistent overtime metrics (>15 hrs/week) experienced a 3x higher exit rate.</li>
+                            <li><strong>Actionable Insight:</strong> Designed an attrition risk flag based on tenure and last-promotion date, allowing HR managers to engage in proactive retention talks.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tools-showcase">
+                        <span>Tools Integrated:</span>
+                        <div class="tool-badges">
+                            <span class="tb">Power BI Desktop</span>
+                            <span class="tb">Descriptive Stats</span>
+                            <span class="tb">DAX Functions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
