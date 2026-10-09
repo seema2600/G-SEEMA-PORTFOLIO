@@ -2,359 +2,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Seema's Data Analytics portfolio showcasing Power BI, SQL, Python, Excel, and analytics projects.">
-    <title>Seema | Data Analytics Portfolio</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Seema's portfolio in data analytics, Power BI, Excel, Python and SQL.">
+  <title>Seema | Data Analytics Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <a href="#home" class="logo">SEEMA<span class="gradient-text">.</span></a>
-
-        <button class="menu-toggle" id="menu-toggle"
-                aria-label="Toggle navigation" aria-expanded="false">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <ul id="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certifications">Certificates</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+  <header class="navbar">
+    <a class="logo" href="#home">SEEMA<span>.</span></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <main>
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">DATA ANALYTICS PORTFOLIO</p>
+        <h1>Hello, I'm <span class="gradient-text">Seema</span></h1>
+        <h2>Aspiring Data Analyst</h2>
+        <p>
+          I turn data into meaningful insights using SQL, Python,
+          Microsoft Excel and Power BI. Explore my projects in
+          business intelligence, customer analytics and reporting.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn" href="#projects">Explore Projects <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="btn btn-outline" href="#contact">Contact Me</a>
+        </div>
+        <div class="social-links">
+          <!-- Replace these with your actual profile URLs -->
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
 
-        <!-- Hero -->
-        <section class="hero" id="home">
-            <div class="hero-content">
-                <p class="eyebrow">HELLO, WELCOME TO MY PORTFOLIO</p>
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <img src="assets/profile.jpg" alt="Seema's profile photo">
+        </div>
+        <div class="photo-caption">
+          <i class="fa-solid fa-chart-line"></i>
+          <span>Turning Data Into Insights</span>
+        </div>
+      </div>
+    </section>
 
-                <h1>Hi, I'm <span class="gradient-text">Seema</span></h1>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <p class="eyebrow">GET TO KNOW ME</p>
+      <h2>About <span class="gradient-text">Me</span></h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <i class="fa-solid fa-user-graduate big-icon"></i>
+          <h3>Business & Analytics</h3>
+          <p>BBA graduate interested in business intelligence, reporting and data-driven decision-making.</p>
+        </div>
+        <div class="about-copy">
+          <p>
+            I'm building my career in data analytics by practising
+            data cleaning, SQL queries, Python analysis, Excel reporting
+            and interactive Power BI dashboards.
+          </p>
+          <p>
+            My goal is to communicate business findings clearly and
+            turn raw datasets into useful, understandable information.
+            This portfolio brings together my work across different tools.
+          </p>
+          <a href="#projects" class="text-link">See my work <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
 
-                <h2>Aspiring Data Analyst</h2>
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <p class="eyebrow">MY TOOLKIT</p>
+      <h2>Technical <span class="gradient-text">Skills</span></h2>
+      <p class="section-intro">Tools and techniques I use in my analytics practice.</p>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <i class="fa-solid fa-chart-column"></i>
+          <h3>Power BI</h3>
+          <p>Dashboards, DAX, KPIs, data modelling</p>
+        </article>
+        <article class="skill-card">
+          <i class="fa-solid fa-file-excel"></i>
+          <h3>Excel</h3>
+          <p>PivotTables, lookups, data cleaning, reporting</p>
+        </article>
+        <article class="skill-card">
+          <i class="fa-brands fa-python"></i>
+          <h3>Python</h3>
+          <p>Pandas, NumPy, data manipulation and analysis</p>
+        </article>
+        <article class="skill-card">
+          <i class="fa-solid fa-database"></i>
+          <h3>SQL</h3>
+          <p>Joins, subqueries, GROUP BY, aggregations</p>
+        </article>
+        <article class="skill-card">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+          <h3>Data Analysis</h3>
+          <p>Trends, business questions and insights</p>
+        </article>
+      </div>
+    </section>
 
-                <p>
-                    I transform raw data into meaningful insights using
-                    SQL, Python, Excel and Power BI. I enjoy building
-                    interactive dashboards and solving business problems
-                    through data.
-                </p>
+    <!-- ALL EIGHT PROJECTS -->
+    <section id="projects" class="section">
+      <p class="eyebrow">MY PORTFOLIO WORK</p>
+      <h2>Projects & <span class="gradient-text">Case Studies</span></h2>
+      <p class="section-intro">
+        Explore my Power BI dashboards and my separate Excel, Python and SQL projects.
+      </p>
 
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn">Explore My Projects</a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
-                </div>
+      <div class="project-filters" aria-label="Filter projects">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="powerbi">Power BI</button>
+        <button class="filter-btn" data-filter="excel">Excel</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="sql">SQL</button>
+      </div>
 
-                <div class="social-links">
-                    <!-- Replace # with your actual profile URLs -->
-                    <a href="https://github.com/" target="_blank"
-                       rel="noopener noreferrer" aria-label="GitHub">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/" target="_blank"
-                       rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                </div>
-            </div>
+      <div class="projects-grid">
 
-            <div class="hero-image">
-                <div class="profile-placeholder">
-                    <i class="fa-solid fa-user-astronaut"></i>
-                    <span>DATA ANALYTICS</span>
-                </div>
-            </div>
-        </section>
+        <!-- POWER BI 1 -->
+        <article class="project-card" data-category="powerbi">
+          <div class="project-art art-airline"><i class="fa-solid fa-plane"></i><span>POWER BI</span></div>
+          <div class="project-body">
+            <span class="project-type">Power BI Dashboard</span>
+            <h3>Airline Analytics Dashboard</h3>
+            <p>Explore flight activity, passenger metrics, revenue and key airline performance indicators.</p>
+            <div class="tags"><span>Power BI</span><span>DAX</span><span>KPIs</span></div>
+            <a class="project-link" href="#contact">Project details <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
 
-        <!-- About -->
-        <section id="about" class="about">
-            <div class="about-image">
-                <div class="about-visual">
-                    <i class="fa-solid fa-chart-line"></i>
-                    <h3>Turning Data Into Decisions</h3>
-                    <p>Analyze · Visualize · Discover</p>
-                </div>
-            </div>
+        <!-- POWER BI 2 -->
+        <article class="project-card" data-category="powerbi">
+          <div class="project-art art-election"><i class="fa-solid fa-check-to-slot"></i><span>POWER BI</span></div>
+          <div class="project-body">
+            <span class="project-type">Power BI Dashboard</span>
+            <h3>Tamil Nadu Election Dashboard</h3>
+            <p>Explore election results and compare political performance across constituencies and regions.</p>
+            <div class="tags"><span>Power BI</span><span>Data Visualisation</span></div>
+            <a class="project-link" href="#contact">Project details <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
 
-            <div class="about-content">
-                <p class="eyebrow">GET TO KNOW ME</p>
-                <h2>About <span>Me</span></h2>
+        <!-- POWER BI 3 -->
+        <article class="project-card" data-category="powerbi">
+          <div class="project-art art-hr"><i class="fa-solid fa-users"></i><span>POWER BI</span></div>
+          <div class="project-body">
+            <span class="project-type">Power BI Dashboard</span>
+            <h3>HR Analytics Dashboard</h3>
+            <p>Analyse workforce data, employee demographics and human resource trends.</p>
+            <div class="tags"><span>Power BI</span><span>HR Analytics</span></div>
+            <a class="project-link" href="#contact">Project details <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
 
-                <p>
-                    I'm a BBA graduate interested in data analytics,
-                    business intelligence and data-driven decision-making.
-                    I am developing my technical skills through hands-on
-                    projects and continuous practice.
-                </p>
+        <!-- POWER BI 4 -->
+        <article class="project-card" data-category="powerbi">
+          <div class="project-art art-retail"><i class="fa-solid fa-store"></i><span>POWER BI</span></div>
+          <div class="project-body">
+            <span class="project-type">Power BI Dashboard</span>
+            <h3>Retail Sales Dashboard</h3>
+            <p>Review sales performance, product categories, revenue trends and business results.</p>
+            <div class="tags"><span>Power BI</span><span>Sales Analysis</span></div>
+            <a class="project-link" href="#contact">Project details <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
 
-                <p>
-                    My focus is on cleaning data, writing SQL queries,
-                    analyzing datasets with Python, and creating
-                    interactive Power BI dashboards that communicate
-                    insights clearly.
-                </p>
+        <!-- POWER BI 5 -->
+        <article class="project-card" data-category="powerbi">
+          <div class="project-art art-ecommerce"><i class="fa-solid fa-truck-fast"></i><span>POWER BI</span></div>
+          <div class="project-body">
+            <span class="project-type">Power BI Dashboard</span>
+            <h3>E-Commerce Delivery & Operations Intelligence</h3>
+            <p>Monitor orders, revenue, delivery status, regions, product categories and sales channels.</p>
+            <div class="tags"><span>Power BI</span><span>DAX</span><span>Operations</span></div>
+            <a class="project-link" href="#contact">Project details <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
 
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <h3>04</h3>
-                        <p>Featured Projects</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>05</h3>
-                        <p>Core Skills</p>
-                    </div>
-                </div>
+        <!-- EXCEL -->
+        <article class="project-card" data-category="excel">
+          <div class="project-art art-excel"><i class="fa-solid fa-file-excel"></i><span>MICROSOFT EXCEL</span></div>
+          <div class="project-body">
+            <span class="project-type">Excel Analytics Project</span>
+            <h3>Revenue Leakage & Profitability Analysis</h3>
+            <p>Analyse revenue and profit across products, regions, months, channels and customer segments to identify performance gaps.</p>
+            <div class="tags"><span>Excel</span><span>PivotTables</span><span>XLOOKUP</span></div>
+            <a class="project-link" href="#contact">Project details <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
 
-                <a href="#contact" class="btn">Let's Connect</a>
-            </div>
-        </section>
+        <!-- PYTHON -->
+        <article class="project-card" data-category="python">
+          <div class="project-art art-python"><i class="fa-brands fa-python"></i><span>PYTHON</span></div>
+          <div class="project-body">
+            <span class="project-type">Python Analytics Project</span>
+            <h3>Customer Analytics</h3>
+            <p>Explore customer and sales data using Python, including data cleaning, filtering, grouping and summary statistics.</p>
+            <div class="tags"><span>Python</span><span>Pandas</span><span>NumPy</span></div>
+            <a class="project-link" href="#contact">Project details <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
 
-        <!-- Skills -->
-        <section id="skills">
-            <p class="eyebrow">WHAT I WORK WITH</p>
-            <h2>My Technical <span>Skills</span></h2>
-            <p>Tools I use to explore data and create useful insights.</p>
+        <!-- SQL -->
+        <article class="project-card" data-category="sql">
+          <div class="project-art art-sql"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+          <div class="project-body">
+            <span class="project-type">SQL Analytics Project</span>
+            <h3>Sales Analytics</h3>
+            <p>Answer business questions using SQL joins, subqueries, aggregations, filtering and sales comparisons.</p>
+            <div class="tags"><span>SQL</span><span>Joins</span><span>Subqueries</span></div>
+            <a class="project-link" href="#contact">Project details <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
 
-            <div class="skills-container">
-                <div class="skill-card">
-                    <i class="fa-solid fa-database"></i>
-                    <h3>SQL</h3>
-                    <p>Queries, joins, subqueries, aggregations</p>
-                </div>
+      </div>
+      <p class="project-note">
+        Project cards are summaries. Add your actual dashboard screenshots and project file links to make each project fully viewable.
+      </p>
+    </section>
 
-                <div class="skill-card">
-                    <i class="fa-brands fa-python"></i>
-                    <h3>Python</h3>
-                    <p>Pandas, NumPy, data analysis</p>
-                </div>
+    <!-- CERTIFICATES -->
+    <section id="certifications" class="section">
+      <p class="eyebrow">CONTINUOUS LEARNING</p>
+      <h2>Certificates & <span class="gradient-text">Learning</span></h2>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <i class="fa-solid fa-award"></i>
+          <h3>Deloitte Data Analytics</h3>
+          <p>Data analytics job simulation</p>
+        </article>
+        <article class="skill-card">
+          <i class="fa-solid fa-certificate"></i>
+          <h3>Tata Data Visualization</h3>
+          <p>Data visualization job simulation</p>
+        </article>
+      </div>
+    </section>
 
-                <div class="skill-card">
-                    <i class="fa-solid fa-chart-column"></i>
-                    <h3>Power BI</h3>
-                    <p>Dashboards, DAX, KPIs, visualization</p>
-                </div>
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <p class="eyebrow">MY BACKGROUND</p>
+      <h2>Education & <span class="gradient-text">Training</span></h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <h3>Bachelor of Business Administration</h3>
+          <p>Charans Degree College · Graduated 2025</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <h3>Data Analytics & Data Science Training</h3>
+          <p>SQL, Power BI, Python and Excel</p>
+        </div>
+      </div>
+    </section>
 
-                <div class="skill-card">
-                    <i class="fa-solid fa-file-excel"></i>
-                    <h3>Excel</h3>
-                    <p>Pivot tables, lookups, data cleaning</p>
-                </div>
+    <!-- RESUME -->
+    <section id="resume" class="section resume-section">
+      <p class="eyebrow">MY PROFILE</p>
+      <h2>My <span class="gradient-text">Resume</span></h2>
+      <p>View my resume for my skills, education and project experience.</p>
+      <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">
+        <i class="fa-solid fa-file-arrow-down"></i> View Resume
+      </a>
+      <p class="small-note">Upload your PDF as assets/resume.pdf to activate this link.</p>
+    </section>
 
-                <div class="skill-card">
-                    <i class="fa-solid fa-chart-pie"></i>
-                    <h3>Data Visualization</h3>
-                    <p>Charts, reports and business insights</p>
-                </div>
-            </div>
-        </section>
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <p class="eyebrow">LET'S CONNECT</p>
+      <h2>Get In <span class="gradient-text">Touch</span></h2>
+      <p class="section-intro">Interested in my projects or an opportunity? Contact me.</p>
+      <div class="contact-card">
+        <p><i class="fa-solid fa-envelope"></i> Add your email address in script.js</p>
+        <div class="social-links contact-socials">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        <!-- Projects -->
-        <section id="projects">
-            <p class="eyebrow">MY WORK</p>
-            <h2>Featured <span>Projects</span></h2>
-            <p>Explore my analytics and business intelligence projects.</p>
+  <footer>
+    <p>© <span id="year"></span> Seema · Data Analytics Portfolio</p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
 
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="powerbi">Power BI</button>
-                <button class="filter-btn" data-filter="sql">SQL</button>
-                <button class="filter-btn" data-filter="python">Python</button>
-            </div>
-
-            <div class="projects-container">
-
-                <article class="project-card" data-category="powerbi">
-                    <div class="project-visual visual-delivery">
-                        <i class="fa-solid fa-truck-fast"></i>
-                        <span>POWER BI</span>
-                    </div>
-                    <h3>E-Commerce Delivery & Operations Intelligence</h3>
-                    <p>
-                        An operations dashboard concept for monitoring
-                        orders, revenue, delivery performance, regions
-                        and product categories.
-                    </p>
-                    <div class="project-tags">
-                        <span>Power BI</span><span>DAX</span><span>KPIs</span>
-                    </div>
-                    <a href="#contact" class="project-link">
-                        Discuss Project <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </article>
-
-                <article class="project-card" data-category="powerbi">
-                    <div class="project-visual visual-retail">
-                        <i class="fa-solid fa-store"></i>
-                        <span>POWER BI</span>
-                    </div>
-                    <h3>Retail Sales Dashboard</h3>
-                    <p>
-                        A sales analysis project designed to explore
-                        revenue trends, product performance and
-                        category-level results.
-                    </p>
-                    <div class="project-tags">
-                        <span>Power BI</span><span>Sales</span><span>Analytics</span>
-                    </div>
-                    <a href="#contact" class="project-link">
-                        Discuss Project <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </article>
-
-                <article class="project-card" data-category="powerbi">
-                    <div class="project-visual visual-airline">
-                        <i class="fa-solid fa-plane"></i>
-                        <span>POWER BI</span>
-                    </div>
-                    <h3>Airline Analytics Dashboard</h3>
-                    <p>
-                        An airline reporting project focused on flights,
-                        passengers, revenue and key operational metrics.
-                    </p>
-                    <div class="project-tags">
-                        <span>Power BI</span><span>KPIs</span><span>Reporting</span>
-                    </div>
-                    <a href="#contact" class="project-link">
-                        Discuss Project <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </article>
-
-                <article class="project-card" data-category="powerbi">
-                    <div class="project-visual visual-hr">
-                        <i class="fa-solid fa-users"></i>
-                        <span>POWER BI</span>
-                    </div>
-                    <h3>HR Analytics Dashboard</h3>
-                    <p>
-                        An HR reporting project designed to explore
-                        workforce metrics, employee demographics and
-                        human resource trends.
-                    </p>
-                    <div class="project-tags">
-                        <span>Power BI</span><span>HR</span><span>Insights</span>
-                    </div>
-                    <a href="#contact" class="project-link">
-                        Discuss Project <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- Certifications -->
-        <section id="certifications">
-            <p class="eyebrow">LEARNING & DEVELOPMENT</p>
-            <h2>Certifications & <span>Achievements</span></h2>
-
-            <div class="projects-container">
-                <article class="project-card">
-                    <div class="certificate-icon">
-                        <i class="fa-solid fa-award"></i>
-                    </div>
-                    <h3>Deloitte Data Analytics</h3>
-                    <p>
-                        Data analytics job simulation.
-                        Add the certificate link or file after uploading it.
-                    </p>
-                    <a href="#contact" class="project-link">Certificate details</a>
-                </article>
-
-                <article class="project-card">
-                    <div class="certificate-icon">
-                        <i class="fa-solid fa-certificate"></i>
-                    </div>
-                    <h3>Tata Data Visualization</h3>
-                    <p>
-                        Data visualization job simulation.
-                        Add the certificate link or file after uploading it.
-                    </p>
-                    <a href="#contact" class="project-link">Certificate details</a>
-                </article>
-            </div>
-        </section>
-
-        <!-- Education -->
-        <section id="education">
-            <p class="eyebrow">MY BACKGROUND</p>
-            <h2>Education & <span>Learning</span></h2>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Bachelor of Business Administration (BBA)</h3>
-                    <p>Charans Degree College · Graduated 2025</p>
-                </div>
-
-                <div class="timeline-item">
-                    <h3>Data Analytics & Data Science Training</h3>
-                    <p>SQL, Power BI, Python and Excel</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Resume -->
-        <section id="resume">
-            <p class="eyebrow">MY EXPERIENCE & SKILLS</p>
-            <h2>My <span>Resume</span></h2>
-            <p>
-                View or download my resume to learn more about my
-                education, skills and projects.
-            </p>
-            <!-- Upload your resume into assets and update this path. -->
-            <a href="assets/resume.pdf" class="btn" id="resume-link"
-               target="_blank" rel="noopener noreferrer">
-                <i class="fa-solid fa-download"></i> View Resume
-            </a>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact">
-            <p class="eyebrow">LET'S CONNECT</p>
-            <h2>Get In <span>Touch</span></h2>
-            <p>
-                Interested in my work or have an opportunity to discuss?
-                Send me a message.
-            </p>
-
-            <div class="contact-container">
-                <form class="contact-form" id="contact-form">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name"
-                           placeholder="Enter your name" required>
-
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email"
-                           placeholder="Enter your email" required>
-
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message"
-                              placeholder="Write your message..." required></textarea>
-
-                    <button type="submit">
-                        Send Message <i class="fa-solid fa-paper-plane"></i>
-                    </button>
-                    <p id="form-status" role="status"></p>
-                </form>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>© <span id="year"></span> Seema. Built with HTML, CSS & JavaScript.</p>
-        <a href="#home">Back to top ↑</a>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
