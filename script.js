@@ -1,27 +1,27 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-  // 1. Copyright year
+  // Update the footer year automatically.
   const year = document.getElementById("year");
 
   if (year) {
     year.textContent = new Date().getFullYear();
   }
 
-  // 2. Mobile navigation
-  const menuToggle = document.getElementById("menu-toggle");
+  // Mobile navigation.
+  const menuButton = document.getElementById("menu-toggle");
   const navLinks = document.getElementById("nav-links");
 
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", function () {
-      const isOpen = navLinks.classList.toggle("show");
+  if (menuButton && navLinks) {
+    menuButton.addEventListener("click", function () {
+      const open = navLinks.classList.toggle("show");
 
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-      menuToggle.setAttribute(
+      menuButton.setAttribute("aria-expanded", String(open));
+      menuButton.setAttribute(
         "aria-label",
-        isOpen ? "Close menu" : "Open menu"
+        open ? "Close navigation" : "Open navigation"
       );
 
-      menuToggle.innerHTML = isOpen
+      menuButton.innerHTML = open
         ? '<i class="fa-solid fa-xmark"></i>'
         : '<i class="fa-solid fa-bars"></i>';
     });
@@ -29,80 +29,56 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         navLinks.classList.remove("show");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open menu");
-        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open navigation");
+        menuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
       });
     });
   }
 
-  // 3. Filter all eight projects by category
+  // Filter projects by technology.
   const filterButtons = document.querySelectorAll(".filter-btn");
-  const projectCards = document.querySelectorAll(
-    ".projects-grid .project-card"
-  );
+  const projectCards = document.querySelectorAll(".project-card");
 
   filterButtons.forEach(function (button) {
     button.addEventListener("click", function () {
-      const selectedCategory = button.dataset.filter;
+      const filter = button.dataset.filter;
 
       filterButtons.forEach(function (item) {
-        item.classList.remove("active");
+        item.classList.toggle("active", item === button);
       });
-
-      button.classList.add("active");
 
       projectCards.forEach(function (card) {
         const category = card.dataset.category;
-
-        card.hidden =
-          selectedCategory !== "all" &&
-          selectedCategory !== category;
+        card.hidden = filter !== "all" && category !== filter;
       });
     });
   });
 
-  // 4. Reveal sections when they enter the screen
-  const sections = document.querySelectorAll("main section");
+  // Add your real email address here.
+  const portfolioEmail = "YOUR_EMAIL@example.com";
+  const emailLink = document.getElementById("email-link");
 
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.08 }
-    );
-
-    sections.forEach(function (section) {
-      section.classList.add("reveal");
-      observer.observe(section);
-    });
-  } else {
-    sections.forEach(function (section) {
-      section.classList.add("visible");
-    });
+  if (emailLink && portfolioEmail !== "YOUR_EMAIL@example.com") {
+    emailLink.textContent = portfolioEmail;
+    emailLink.href = "mailto:" + portfolioEmail;
   }
 
-  // 5. Contact details
-  // Replace this placeholder with your real email address.
-  const portfolioEmail = "YOUR_EMAIL@example.com";
+  // Handle missing profile photo gracefully.
+  const profileImage = document.querySelector(".photo-frame img");
 
-  const contactCard = document.querySelector(".contact-card");
+  if (profileImage) {
+    profileImage.addEventListener("error", function () {
+      profileImage.alt =
+        "Profile photo not uploaded yet. Upload assets/profile.jpg to GitHub.";
+      profileImage.style.display = "none";
 
-  if (contactCard) {
-    const emailText = contactCard.querySelector("p");
-
-    if (emailText && portfolioEmail !== "YOUR_EMAIL@example.com") {
-      emailText.innerHTML =
-        '<i class="fa-solid fa-envelope"></i> ' +
-        '<a href="mailto:' + portfolioEmail + '">' +
-        portfolioEmail +
-        "</a>";
-    }
+      const frame = profileImage.parentElement;
+      frame.style.display = "grid";
+      frame.style.placeItems = "center";
+      frame.style.color = "#c084fc";
+      frame.style.fontSize = "1rem";
+      frame.textContent = "Upload your profile photo";
+    });
   }
 });
